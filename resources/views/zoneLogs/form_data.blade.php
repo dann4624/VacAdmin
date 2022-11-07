@@ -1,0 +1,5 @@
+@include('partials.form.input.zone')
+@include('partials.form.input.log_action')
+@include('partials.form.input.temperature')
+@include('partials.form.input.humidity')
+@include('partials.form.input.alarm')
