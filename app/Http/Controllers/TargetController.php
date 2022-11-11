@@ -20,7 +20,7 @@ class TargetController extends Controller
             ->with('plural',"targets")
             ->with('singular',"target")
             ->with('name',"name")
-            ;
+        ;
     }
 
     public function deleted(){
@@ -47,6 +47,7 @@ class TargetController extends Controller
 
         return view('targets.show')
             ->with('data',$data)
+            ->with('name',"name")
             ->with('plural',"targets")
             ->with('singular',"target");
     }

@@ -48,8 +48,10 @@ class BoxLogController extends Controller
 
         return view('boxLogs.show')
             ->with('data',$data)
+            ->with('name',"id")
             ->with('plural',"zones")
-            ->with('singular',"boxLog");
+            ->with('singular',"boxLog")
+        ;
     }
 
     public function edit($id){

@@ -47,6 +47,7 @@ class TypeController extends Controller
 
         return view('types.show')
             ->with('data',$data)
+            ->with('name',"name")
             ->with('plural',"types")
             ->with('singular',"type");
     }

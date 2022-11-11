@@ -1,6 +1,6 @@
 <thead>
     <th class="text-capitalize">@lang('time')</th>
-    <th class="text-capitalize text-center">@lang('action')</th>
+    <th class="text-capitalize text-center">@lang('log') @lang('action')</th>
     <th class="text-capitalize text-center">@lang('zone')</th>
     <th class="text-capitalize text-center">@lang('temperature')</th>
     <th class="text-capitalize text-center">@lang('humidity')</th>
@@ -11,11 +11,11 @@
     @foreach($data as $entity)
         <tr>
             <td>
-                {{$entity['created_at']}}
+                {{date('d-m-Y H:i:s',strtotime($entity['created_at']))}}
             </td>
 
             <td class="text-capitalize text-center">
-                @lang($entity['log_action']['name'])
+                <a href="{{route('logActions.show',['logAction' => $entity['log_action']['id']])}}" class="btn btn-outline-success">@lang($entity['log_action']['name'])</a>
             </td>
 
             <td class="text-center">
@@ -30,8 +30,12 @@
                 {{$entity['humidity']}}
             </td>
 
-            <td class="text-center">
-                {{$entity['alarm']}}
+            <td class="text-center text-capitalize">
+                @if($entity['alarm'] == 1)
+                    @lang('true')
+                @elseif($entity['alarm'] == 0)
+                    @lang('false')
+                @endif
             </td>
 
             <td class=" text-center">

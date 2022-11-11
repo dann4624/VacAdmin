@@ -48,6 +48,7 @@ class ZoneLogController extends Controller
 
         return view('zoneLogs.show')
             ->with('data',$data)
+            ->with('name',"id")
             ->with('plural',"zones")
             ->with('singular',"zoneLog");
     }

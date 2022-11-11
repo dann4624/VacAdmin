@@ -48,6 +48,7 @@ class BoxController extends Controller
 
         return view('boxes.show')
             ->with('data',$data)
+            ->with('name',"name")
             ->with('plural',"boxes")
             ->with('singular',"box");
     }

@@ -48,6 +48,7 @@ class ZoneController extends Controller
 
         return view('zones.show')
             ->with('data',$data)
+            ->with('name',"name")
             ->with('plural',"zones")
             ->with('singular',"zone");
     }

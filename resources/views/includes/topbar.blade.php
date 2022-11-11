@@ -13,7 +13,7 @@
             @endif
         </div>
         <div class="col-6">
-            {{now()}} | {{date('d-m-y H:i:s', strtotime(now()))}}
+
         </div>
 
         <div class="col">

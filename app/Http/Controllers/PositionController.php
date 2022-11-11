@@ -48,6 +48,7 @@ class PositionController extends Controller
 
         return view('positions.show')
             ->with('data',$data)
+            ->with('name',"name")
             ->with('plural',"positions")
             ->with('singular',"position");
     }

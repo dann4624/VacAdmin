@@ -47,6 +47,7 @@ class LogActionController extends Controller
 
         return view('logActions.show')
             ->with('data',$data)
+            ->with('name',"name")
             ->with('plural',"logActions")
             ->with('singular',"logAction");
     }

@@ -47,8 +47,10 @@ class RoleController extends Controller
 
         return view('roles.show')
             ->with('data',$data)
+            ->with('name',"name")
             ->with('plural',"roles")
-            ->with('singular',"role");
+            ->with('singular',"role")
+        ;
     }
 
     public function edit($id){

@@ -51,7 +51,7 @@ class UserController extends Controller
             ->with('data',$data)
             ->with('plural',"users")
             ->with('singular',"user")
-            ->with('name',"id")
+            ->with('name',"name")
             ;
     }
 

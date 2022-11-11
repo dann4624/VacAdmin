@@ -7,6 +7,12 @@
     "maximum": "maximum",
     "minimum": "minimum",
     "expires": "udløber",
+    "amounts": "mængder",
+    "available": "tilgængelig",
+    "latest": "seneste",
+    "true": "sandt",
+    "false": "falsk",
+    "time": "tidspunkt",
 
     "action": "handling",
     "actions": "handlinger",

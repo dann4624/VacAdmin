@@ -9,13 +9,13 @@
     @foreach($data as $entity)
         <tr>
             <td>
-                {{$entity['created_at']}}
+                {{date('d-m-Y H:i:s',strtotime($entity['created_at']))}}
             </td>
             <td class="text-capitalize">
                 @lang($entity['log_action']['name'])
             </td>
             <td>
-                <a href="{{route('users.show',['id' => $entity['user']['id']])}}" class="btn btn-outline-success">{{$entity['user']['name']}}</a>
+                <a href="{{route('users.show',['user' => $entity['user']['id']])}}" class="btn btn-outline-success">{{$entity['user']['name']}}</a>
             </td>
             <td>
                 {{$entity['data']}}

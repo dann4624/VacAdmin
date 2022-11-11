@@ -10,10 +10,10 @@
     @foreach($data as $entity)
         <tr>
             <td>
-                {{$entity['type']['name']}}
+                <a href="{{route('types.show',['type' => $entity['type']['id']])}}" class="btn btn-outline-success">{{$entity['type']['name']}}</a>
             </td>
             <td>
-                {{$entity['position']['zone']['name']}} - {{$entity['position']['name']}}
+                <a href="{{route('positions.show',['position' => $entity['position']['id']])}}" class="btn btn-outline-success">{{$entity['position']['zone']['name']}} - {{$entity['position']['name']}}</a>
             </td>
             <td>
                {{$entity['name']}}
@@ -22,7 +22,7 @@
                 {{$entity['batch']}}
             </td>
             <td>
-                {{$entity['expires_at']}}
+                {{date('d-m-Y H:i:s',strtotime($entity['expires_at']))}}
             </td>
 
             <td class=" text-center">
