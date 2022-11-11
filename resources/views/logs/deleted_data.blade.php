@@ -1,21 +1,26 @@
 <thead>
-<th class="text-capitalize">@lang('action')</th>
-<th class="text-capitalize">@lang('user')</th>
-<th class="text-capitalize">@lang('data')</th>
-<th class="text-capitalize text-center">@lang('actions')</th>
+    <th class="text-capitalize">@lang('time')</th>
+    <th class="text-capitalize">@lang('action')</th>
+    <th class="text-capitalize">@lang('user')</th>
+    <th class="text-capitalize">@lang('data')</th>
+    <th class="text-capitalize text-center">@lang('actions')</th>
 </thead>
 <tbody>
 @foreach($data as $entity)
     <tr>
-        <td class="text-capitalize">
-            @lang($entity['log_action']['name'])
+        <td>
+            {{date('d-m-Y H:i:s',strtotime($entity['created_at']))}}
+        </td>
+        <td class="text-capitalize text-center">
+            <a href="{{route('logActions.show',['logAction' => $entity['log_action']['id']])}}" class="btn btn-outline-success">@lang($entity['log_action']['name'])</a>
         </td>
         <td>
-            {{$entity['user']['name']}}
+            <a href="{{route('users.show',['user' => $entity['user']['id']])}}" class="btn btn-outline-success">{{$entity['user']['name']}}</a>
         </td>
         <td>
             {{$entity['data']}}
         </td>
+
         <td class=" text-center">
             @if(in_array(request()->segment(1)."_restore",Session::get('permissions')))
                 @include('partials.page_inputs.restore_button')

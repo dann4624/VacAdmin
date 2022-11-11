@@ -3,7 +3,6 @@
     <th class="text-capitalize text-center">@lang('shelf_life')</th>
     <th class="text-capitalize text-center">@lang('min') @lang('temperature')</th>
     <th class="text-capitalize text-center">@lang('max') @lang('temperature')</th>
-    <th class="text-capitalize text-center">Blop</th>
     <th class="text-capitalize text-center">@lang('actions')</th>
 </thead>
 <tbody>
@@ -20,9 +19,6 @@
             </td>
             <td class="text-center">
                 {{$entity['maximum_temperature']}}
-            </td>
-            <td class="text-center">
-                {{date('H:i:s',strtotime($entity['created_at']))}}
             </td>
 
             <td class=" text-center">

@@ -11,8 +11,8 @@
             <td>
                 {{date('d-m-Y H:i:s',strtotime($entity['created_at']))}}
             </td>
-            <td class="text-capitalize">
-                @lang($entity['log_action']['name'])
+            <td class="text-capitalize text-center">
+                <a href="{{route('logActions.show',['logAction' => $entity['log_action']['id']])}}" class="btn btn-outline-success">@lang($entity['log_action']['name'])</a>
             </td>
             <td>
                 <a href="{{route('users.show',['user' => $entity['user']['id']])}}" class="btn btn-outline-success">{{$entity['user']['name']}}</a>

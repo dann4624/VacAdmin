@@ -11,7 +11,7 @@
     @foreach($data as $entity)
         <tr>
             <td>
-                {{$entity['created_at']}}
+                {{date('d-m-Y H:i:s',strtotime($entity['created_at']))}}
             </td>
 
             <td class="text-capitalize text-center">
@@ -30,8 +30,12 @@
                 {{$entity['humidity']}}
             </td>
 
-            <td class="text-center">
-                {{$entity['alarm']}}
+            <td class="text-center text-capitalize">
+                @if($entity['alarm'] == 1)
+                    @lang('true')
+                @elseif($entity['alarm'] == 0)
+                    @lang('false')
+                @endif
             </td>
 
             <td class=" text-center">

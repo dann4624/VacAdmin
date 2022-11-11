@@ -8,31 +8,13 @@
 @foreach($data as $entity)
     <tr>
         <td>
-            {{$entity['created_at']}}
+            <a href="{{route('roles.show',['role' => $entity['role']['id']])}}" class="btn btn-outline-success">{{$entity['role']['name']}}</a>
         </td>
-
-        <td class="text-capitalize text-center">
-            @lang($entity['log_action']['name'])
-        </td>
-
         <td>
-            <a href="{{route('users.show',['user' => $entity['user']['id']])}}" class="btn btn-outline-success">{{$entity['user']['name']}}</a>
+            {{$entity['name']}}
         </td>
-
         <td>
-            <a href="{{route('boxes.show',['box' => $entity['box']['id']])}}" class="btn btn-outline-success">{{$entity['box']['name']}}</a>
-        </td>
-
-        <td>
-            @if(isset($entity['zone']))
-                <a href="{{route('zones.show',['zone' => $entity['zone']['id']])}}" class="btn btn-outline-success">{{$entity['zone']['name']}}</a>
-            @endif
-        </td>
-
-        <td>
-            @if(isset($entity['position']))
-                <a href="{{route('positions.show',['position' => $entity['position']['id']])}}" class="btn btn-outline-success">{{$entity['position']['zone']['name']}} - @lang('position') {{$entity['position']['name']}}</a>
-            @endif
+            {{$entity['email']}}
         </td>
 
         <td class=" text-center">
