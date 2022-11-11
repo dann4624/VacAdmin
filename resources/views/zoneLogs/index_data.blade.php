@@ -9,7 +9,7 @@
 </thead>
 <tbody>
     @foreach($data as $entity)
-        <tr>
+        <tr class="@if($entity['alarm'] == 1) bg-danger @endif">
             <td>
                 {{date('d-m-Y H:i:s',strtotime($entity['created_at']))}}
             </td>

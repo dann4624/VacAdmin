@@ -33,7 +33,7 @@ class BoxLogController extends Controller
 
         return view('boxLogs.deleted')
             ->with('data',$data)
-            ->with('plural',"zones")
+            ->with('plural',"boxLogs")
             ->with('singular',"boxLog")
             ->with('name',"id")
         ;

@@ -8,7 +8,7 @@
 </thead>
 <tbody>
     @foreach($data as $entity)
-        <tr>
+        <tr class="@if(date('d-m-Y H:i:s',strtotime($entity['expires_at'])) > date(strtotime("+".config('app.alert_days')." days"))) bg-danger @endif">
             <td>
                 <a href="{{route('types.show',['type' => $entity['type']['id']])}}" class="btn btn-outline-success">{{$entity['type']['name']}}</a>
             </td>

@@ -16,7 +16,7 @@
             </div>
         </div>
     @endif
-    @if(!isset($data['besked']) && count($data) >= 1)
+    @if($data != null && !isset($data['besked']) && count($data) >= 1)
         <table class="table table-striped">
             @include(request()->segment(1).".index_data")
         </table>
