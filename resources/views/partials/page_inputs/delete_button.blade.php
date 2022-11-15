@@ -1,4 +1,4 @@
-<button data-toggle="modal" data-target="#deleteModal_{{$entity['id']}}" class="btn btn-danger text-capitalize">@lang('delete')</button>
+<button data-toggle="modal" data-target="#deleteModal_{{$entity['id']}}" class="btn btn-danger text-capitalize mt-md-2 mt-lg-0">@lang('delete')</button>
 <div class="product-edit-buttons">
     <!-- Modal -->
     <div class="modal" tabindex="-1" role="dialog" id="deleteModal_{{$entity['id']}}">

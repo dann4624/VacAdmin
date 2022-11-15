@@ -38,6 +38,8 @@
     "zones": "zoner",
     "type": "type",
     "types": "typer",
+    "zoneLogs": "Zone Logs",
+    "boxLogs": "Kasse Logs",
 
     "list": "liste",
     "lists": "lister",

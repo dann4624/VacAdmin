@@ -1,6 +1,6 @@
 <div class="border border-dark px-3 py-2 mb-3" id="topbar">
     <div class="row">
-        <div class="col-4">
+        <div class="col-lg-4 col-md-3">
             <span class="text-capitalize">
                 @lang(request()->segment(1))
             </span>
@@ -12,11 +12,11 @@
                 @endif
             @endif
         </div>
-        <div class="col-6">
+        <div class="col-lg-6 col-md-5">
 
         </div>
 
-        <div class="col">
+        <div class="col-lg-2 col-md-4">
             <span class="text-capitalize">
                 @lang(request()->segment(1))
             </span>

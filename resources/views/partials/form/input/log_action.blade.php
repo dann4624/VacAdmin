@@ -1,8 +1,8 @@
 <div class="mt-2 row">
-    <div class="col-2">
+    <div class="col-md-4 col-lg-2">
         <label for="log_action_id" class="fw-bold text-capitalize">@lang('log action') : </label>
     </div>
-    <div class="col">
+    <div class="col-md-8 col-lg-10">
         <select id="log_action_id" name="log_action_id" class="form-select">
 
             @foreach($logActions as $logAction)

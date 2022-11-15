@@ -25,7 +25,7 @@
             <!-- Page Content  -->
             <div id="container">
                 @include('includes.topbar')
-                <main id="content">
+                <main id="content" class="">
                     @yield('content')
                 </main>
             </div>
