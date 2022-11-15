@@ -14,5 +14,3 @@
 
 2. Rename .env-example to .env
 3. Change the relevant settings inside the .env
-4. Run command:
-> php artisan migrate --seed
