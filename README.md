@@ -12,5 +12,5 @@
 
 > composer install
 
-2. Rename .env-example to .env
+2. Rename .env.example to .env
 3. Change the relevant settings inside the .env
